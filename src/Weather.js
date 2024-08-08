@@ -18,8 +18,11 @@ export default function (props) {
     setIcon(response.condition.icon_url);
   }
 
-  let url = `https://api.shecodes.io/weather/v1/current?query=${props.city}&appid=6c4a1fa1oe455fb969c4b3876f90t341&units=metric`;
-  axios.get(url).then(showWeather);
+  function search() {
+    const apiKey = "6c4a1fa1oe455fb969c4b3876f90t341";
+    let url = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}&units=metric`;
+    axios.get(url).then(showWeather);
+  }
 
   return (
     <ul>
