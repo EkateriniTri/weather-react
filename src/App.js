@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function App() {
   return (
     <div className="App">
-      <h1>City Weather</h1>
+      <h1>World City Weather</h1>
       <Search />
 
       <footer>

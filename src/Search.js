@@ -3,16 +3,15 @@ import { useState } from "react";
 import Weather from "./Weather";
 
 export default function SearchForm() {
-  let [city, setCity] = useState("");
-  let [message, setMessage] = useState("");
+  const [city, enterCity] = useState("props.defaultCity");
 
   function handleSubmit(event) {
     event.preventDefault();
-    setMessage(<Weather city={city} />);
+    <Weather defaultCity={city} />;
   }
 
   function updateCity(event) {
-    setCity(event.target.value);
+    enterCity(event.target.value);
   }
   return (
     <div>
